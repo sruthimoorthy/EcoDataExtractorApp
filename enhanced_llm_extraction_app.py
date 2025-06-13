@@ -550,8 +550,11 @@ class LLMExtractionApp:
     def on_source_change(self):
         """Handle source type change"""
         if self.source_type.get() == "csv":
-            self.column_frame.pack(fill=tk.X, padx=10, pady=5)
+            # Show column frame if it's not already visible
+            if not self.column_frame.winfo_ismapped():
+                self.column_frame.pack(fill=tk.X, padx=10, pady=5, after=self.path_frame)
         else:
+            # Hide column frame
             self.column_frame.pack_forget()
     
     def browse_file_folder(self):
