@@ -332,14 +332,14 @@ class LLMExtractionApp:
     
     def setup_ui(self):
         # --- App Title and Tagline ---
-        self.root.title("EcoData Extractor")
+        self.root.title("LitStructorLLM")
         
         # Title and tagline at the top
         title_frame = tk.Frame(self.root, bg='white')
         title_frame.pack(fill=tk.X, pady=(10, 0))
-        title_label = tk.Label(title_frame, text="EcoData Extractor", font=("Arial", 22, "bold"), bg='white')
+        title_label = tk.Label(title_frame, text="LitStructorLLM", font=("Arial", 22, "bold"), bg='white')
         title_label.pack(pady=(0, 0))
-        tagline_label = tk.Label(title_frame, text="Automatically extract structured ecological and biological information from unstructured text.", font=("Arial", 12, "italic"), bg='white', fg='#444')
+        tagline_label = tk.Label(title_frame, text="Transparent prompting & structured data extraction for everyone using off-the-shelf LLMs", font=("Arial", 12, "italic"), bg='white', fg='#444')
         tagline_label.pack(pady=(0, 10))
         
         # Main container for scrollable form (fills window, left-aligned, responsive width)

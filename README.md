@@ -1,21 +1,25 @@
-# EcoData Extractor App
+# LitStructorLLM
 
-A powerful application for extracting and analyzing data from various sources using multiple LLM providers.
+**Transparent prompting & structured data extraction for everyone using off-the-shelf LLMs**
+
+A powerful application for extracting and analyzing structured data from various sources using multiple LLM providers with transparent prompting strategies.
 
 ## Features
 
-- Support for multiple LLM providers (OpenAI, Google Gemini, etc.)
+- Support for multiple LLM providers (OpenAI, Google Gemini, DeepSeek, Grok, Ollama, etc.)
 - PDF document processing
-- Data extraction and analysis
+- CSV data processing with column selection
+- Transparent prompting with customizable extraction strategies
 - User-friendly GUI interface
 - Cross-platform support
+- Structured data extraction with JSON output
 
 ## Installation
 
 ### macOS Users
 
-1. Download the latest release from the [Releases page](https://github.com/yourusername/EcoDataExtractorApp/releases)
-2. Download the `LLM_Data_Extractor.app` file
+1. Download the latest release from the [Releases page](https://github.com/yourusername/LitStructorLLM/releases)
+2. Download the `LitStructorLLM.app` file
 3. Move it to your Applications folder
 4. Double-click to run
 5. **Note:** The app may take a few moments to open initially due to macOS security checks and library loading.
@@ -30,7 +34,7 @@ A powerful application for extracting and analyzing data from various sources us
    ```
 4. Build the app bundle:
    ```bash
-   python -m PyInstaller --windowed --name=LLM_Data_Extractor enhanced_llm_extraction_app.py
+   python -m PyInstaller --windowed --name=LitStructorLLM enhanced_llm_extraction_app.py
    ```
 5. The `.app` bundle will be in the `dist` directory.
 
@@ -39,8 +43,8 @@ A powerful application for extracting and analyzing data from various sources us
 You have three options:
 
 #### Option 1: Using Pre-built Executable (Recommended)
-1. Download the latest release from the [Releases page](https://github.com/yourusername/EcoDataExtractorApp/releases)
-2. Download the `LLM_Data_Extractor.exe` file
+1. Download the latest release from the [Releases page](https://github.com/yourusername/LitStructorLLM/releases)
+2. Download the `LitStructorLLM.exe` file
 3. Double-click to run the application
 
 #### Option 2: Run from Source
@@ -65,21 +69,21 @@ You have three options:
    ```
 4. Build the executable:
    ```bash
-   python -m PyInstaller --onefile --windowed --name=LLM_Data_Extractor enhanced_llm_extraction_app.py
+   python -m PyInstaller --onefile --windowed --name=LitStructorLLM enhanced_llm_extraction_app.py
    ```
 5. Find the executable in the `dist` folder
 
 ### Linux Users
 
-1. Download the latest release from the [Releases page](https://github.com/yourusername/EcoDataExtractorApp/releases)
-2. Download the `LLM_Data_Extractor` file
+1. Download the latest release from the [Releases page](https://github.com/yourusername/LitStructorLLM/releases)
+2. Download the `LitStructorLLM` file
 3. Make it executable:
    ```bash
-   chmod +x LLM_Data_Extractor
+   chmod +x LitStructorLLM
    ```
 4. Run the application:
    ```bash
-   ./LLM_Data_Extractor
+   ./LitStructorLLM
    ```
 
 #### Building the app yourself (Ubuntu/Linux)
@@ -92,7 +96,7 @@ You have three options:
    ```
 4. Build the executable:
    ```bash
-   python -m PyInstaller --onefile --windowed --name=LLM_Data_Extractor enhanced_llm_extraction_app.py
+   python -m PyInstaller --onefile --windowed --name=LitStructorLLM enhanced_llm_extraction_app.py
    ```
 5. The executable will be in the `dist` directory.
 

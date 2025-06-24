@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build script for Enhanced LLM Data Extraction App
+Build script for LitStructorLLM
 Creates standalone executable files for distribution
 """
 
@@ -62,7 +62,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='LLM_Data_Extractor',
+    name='LitStructorLLM',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -79,7 +79,7 @@ exe = EXE(
 )
 '''
     
-    with open('llm_extractor.spec', 'w') as f:
+    with open('litstructorllm.spec', 'w') as f:
         f.write(spec_content)
     print("✅ Created PyInstaller spec file")
 
@@ -93,7 +93,7 @@ def clean_build_dirs():
 
 def main():
     """Main build process"""
-    print("🚀 Enhanced LLM Data Extraction App Builder")
+    print("🚀 LitStructorLLM Builder")
     print("=" * 60)
     
     # Check if main app file exists
@@ -131,12 +131,12 @@ def main():
     # Build the application
     build_commands = [
         {
-            "cmd": "pyinstaller --onefile --windowed --name=LLM_Data_Extractor enhanced_llm_extraction_app.py",
+            "cmd": "pyinstaller --onefile --windowed --name=LitStructorLLM enhanced_llm_extraction_app.py",
             "desc": "Building standalone executable (simple method)"
         },
         # Alternative build using spec file
         # {
-        #     "cmd": "pyinstaller llm_extractor.spec",
+        #     "cmd": "pyinstaller litstructorllm.spec",
         #     "desc": "Building using spec file (advanced method)"
         # }
     ]
@@ -158,8 +158,8 @@ def main():
     # Check if build was successful
     exe_path = None
     possible_paths = [
-        "dist/LLM_Data_Extractor.exe",  # Windows
-        "dist/LLM_Data_Extractor",      # macOS/Linux
+        "dist/LitStructorLLM.exe",  # Windows
+        "dist/LitStructorLLM",      # macOS/Linux
     ]
     
     for path in possible_paths:
@@ -191,8 +191,8 @@ def main():
         print("Check the 'dist' directory for build outputs.")
 
     # Clean up spec file
-    if os.path.exists('llm_extractor.spec'):
-        os.remove('llm_extractor.spec')
+    if os.path.exists('litstructorllm.spec'):
+        os.remove('litstructorllm.spec')
 
 if __name__ == "__main__":
     main() 
